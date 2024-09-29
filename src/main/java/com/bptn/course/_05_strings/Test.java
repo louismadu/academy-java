@@ -5,16 +5,24 @@ import java.util.Scanner;
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	     int[] scores = { 10, 9, 8, 7};
-	       // Make this loop print out all the scores!
-	     for (int i = 1; i < scores.length; i++) {
-	          System.out.println(  scores[i] );
-        
 
-	     }
+		
+		System.out.println("Press 1 for cookies is 1.99");
+		System.out.println("Press 2 for coke is 2.99");
+		System.out.println("Press 3 for pepse is 2.49");
+		System.out.println("Press 4 for water is 1.49");
+		
+		Scanner scan = new Scanner(System.in);
+		int product = scan.nextInt();
+	    
+//		double[] price = {1.99, 2.99, 2.49, 1.49};
+		
+		System.out.println("You Chose: " + product + " How much do you have?");
+		int price = scan.nextInt();
+		
 
-	      
+		
+		
 
 	}
 
