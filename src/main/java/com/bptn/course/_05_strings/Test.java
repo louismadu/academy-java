@@ -15,11 +15,15 @@ public class Test {
 		Scanner scan = new Scanner(System.in);
 		int product = scan.nextInt();
 	    
-//		double[] price = {1.99, 2.99, 2.49, 1.49};
+		double[] amount = {1.99, 2.99, 2.49, 1.49};
 		
 		System.out.println("You Chose: " + product + " How much do you have?");
 		int price = scan.nextInt();
 		
+		while() {
+			System.out.println("Thank you! DISPENSED");
+			
+		}
 
 		
 		

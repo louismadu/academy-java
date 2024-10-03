@@ -3,42 +3,55 @@ package com.bptn.course._02_scanner;
 import java.util.Scanner;
 
 public class Switchstatement3 {
+	// Adding a new comment
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number (1-3): ");
-		int[] plan = [10, 30, 50, 70];
 		
+		Scanner scanner = new Scanner(System.in);
+		
+		int choice;
+		double billAmount = 0.0;
+		double[] priceList = {19.99, 8.99, 9.99, 6.99};
 		
 		do {
-		    System.out.println("Welcome to the Mobile Data Plan Selectior!");
-		    System.out.println("Please choose an item from the list: ");
-		    System.out.println("1. 1GB - plan[0]");
-		    System.out.println("2. 5GB = plan[1]");
-		    System.out.println("3. 10GB = plan[2]");
-		    System.out.println("4. Unlimited = plan[3]");
-		    System.out.println("5. Exit");
-		
-
-		
-
+			System.out.println("Welcome to the menu!");
+			System.out.println("Please choose an item from the list: ");
+			System.out.println("1. Pizza - $"+priceList[0]);
+			System.out.println("2. Burger - $8.99");
+			System.out.println("3. Pasta - $9.99");
+			System.out.println("4. Salad - $6.99");
+			System.out.println("5. Exit");
+			
+			choice = scanner.nextInt();
+			
 			switch(choice) {
-			case 1: System.out.println("You ordered Pizza!");
+				case 1: System.out.println("You ordered Pizza!");
+						billAmount += priceList[0];
+						break;
+				case 2: System.out.println("You ordered Burger!");
+						billAmount += 8.99;
+						break;
+				case 3: System.out.println("You ordered Pasta!");
+						billAmount += 9.99;
+						break;
+				case 4: System.out.println("You ordered Salad!");
+						billAmount += 6.99;
+						break;
+				case 5: if(billAmount>0) {
+					System.out.println("Thank you for stopping by! Your bill is: "+billAmount);
+				} else{
+					System.out.println("Thank you for stopping by!");
+				}
 					break;
-					sum += 12.99;
-			case 2: System.out.println("You ordered Burger!");
-					break;
-					sum += 8.99;
-			case 3: System.out.println("You ordered Pasta!");
-					break;
-					sum += 9.99;
-			case 4: System.out.println("You ordered Salad!");
-					break;
-					sum += 6.99;
-			case 5: System.out.println("Thank you for stopping by!");
-			        System.out.println("Your bill is: " + sum);
-					break;
-			default:System.out.println("Invalid Choice!");
-		    }
+				default:System.out.println("Invalid Choice!");
+			}
 		}while(choice!=5);
+		
+		
+		scanner.close();
+		// 1. Allow multiple selections	
+		// 2. Calculate total price for the order
+		// 3. While exiting, show the total price	
+
+	}
+
 }
