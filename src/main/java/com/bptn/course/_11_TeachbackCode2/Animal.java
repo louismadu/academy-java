@@ -5,6 +5,8 @@ public abstract class Animal {
 	int age;
 	
 	public abstract void speak();
+	
+
 
 	
 
